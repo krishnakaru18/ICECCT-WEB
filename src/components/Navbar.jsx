@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
@@ -12,6 +12,24 @@ const Navbar = () => {
     const closeMenu = () => {
         setIsMenuOpen(false);
     };
+
+    useEffect(() => {
+        const handleNavLinkClick = () => {
+            closeMenu();
+            window.scrollTo(0, 0);
+        };
+
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', handleNavLinkClick);
+        });
+
+        return () => {
+            navLinks.forEach(link => {
+                link.removeEventListener('click', handleNavLinkClick);
+            });
+        };
+    }, []);
 
     // Nav items with extra options
     const navItems = [
