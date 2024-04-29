@@ -6,7 +6,7 @@ const Plan = () => {
     <div className="bg-gray-100  mt-16 ">
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-4 text-center bg-gradient-to-r from-orange-400 to-orange-800 text-transparent bg-clip-text">INCREDIBLE INDIA</h1>
-        <div className="mb-8 flex flex-col md:flex-row items-center">
+        <div className="mb-8 flex justify-center items-center">
           <img className=' shadow-xl ring-2 ring-green-800 p-2  ' src={tour} alt="INDIA" />
         </div>
         <div className="mb-6">
