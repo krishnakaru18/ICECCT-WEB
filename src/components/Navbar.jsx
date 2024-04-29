@@ -59,7 +59,7 @@ const Navbar = () => {
                     <ul className="md:flex gap-2 md:text-xs text-sm hidden">
                         {navItems.map(({ path, link }) => (
                             <li className="text-white relative" key={path}>
-                                <NavLink className="nav-link" activeClassName="active" to={path}>{link}</NavLink>
+                                <NavLink className="nav-link" activeclassname="active" to={path}>{link}</NavLink>
                             </li>
                         ))}
                     </ul>
@@ -68,7 +68,7 @@ const Navbar = () => {
                 <ul className={`md:hidden gap-4 text-md block space-y-4 px-4 py-6 mt-16 dark:backdrop-filter dark:backdrop-blur-lg dark:bg-opacity-30 bg-white ${isMenuOpen ? "fixed top-0 left-0 w-full transition-all ease-out duration-150" : "hidden"}`}>
                     {navItems.map(({ path, link }) => (
                         <li className="text-black relative" key={path}>
-                            <NavLink onClick={closeMenu} className="nav-link" to={path}>{link}</NavLink>
+                            <NavLink onClick={closeMenu} className="nav-link" activeclassname="active" to={path}>{link}</NavLink>
                         </li>
                     ))}
                 </ul>
